@@ -24,7 +24,7 @@
                 "dev-master": "3.2-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Symfony\\Component\\Process\\": ""

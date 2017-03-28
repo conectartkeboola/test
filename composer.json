@@ -1,6 +1,5 @@
 {
     "require": {
-        "keboola/csv": "^1.1",
         "keboola/storage-api-client": "^6.2"
     }
 }
