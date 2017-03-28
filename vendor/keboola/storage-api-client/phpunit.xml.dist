@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         stopOnError="false"
+         syntaxCheck="false"
+		 verbose="true"
+         bootstrap="tests/bootstrap.php">
+
+	<testsuite name="common">
+		<directory>tests/Common</directory>
+		<directory>tests/Options</directory>
+	</testsuite>
+
+	<testsuite name="backend-mysql">
+		<directory>tests/Backend/CommonPart1</directory>
+		<directory>tests/Backend/CommonPart2</directory>
+		<directory>tests/Backend/Mysql</directory>
+	</testsuite>
+
+	<testsuite name="backend-redshift-part-1">
+		<directory>tests/Backend/CommonPart1</directory>
+	</testsuite>
+
+	<testsuite name="backend-redshift-part-2">
+		<directory>tests/Backend/CommonPart2</directory>
+		<file>tests/Backend/Workspaces/WorkspacesRedshiftTest.php</file>
+		<file>tests/Backend/Workspaces/WorkspacesTest.php</file>
+		<file>tests/Backend/Workspaces/WorkspacesUnloadTest.php</file>
+		<file>tests/Backend/Workspaces/WorkspacesLoadTest.php</file>
+		<directory>tests/Backend/Redshift</directory>
+		<file>tests/Backend/Export/ExportParamsTest.php</file>
+	</testsuite>
+
+	<testsuite name="backend-snowflake-part-1">
+		<directory>tests/Backend/CommonPart1</directory>
+	</testsuite>
+
+	<testsuite name="backend-snowflake-part-2">
+		<directory>tests/Backend/CommonPart2</directory>
+        <file>tests/Backend/Workspaces/WorkspacesSnowflakeTest.php</file>
+		<file>tests/Backend/Workspaces/WorkspacesTest.php</file>
+		<file>tests/Backend/Workspaces/WorkspacesUnloadTest.php</file>
+		<file>tests/Backend/Workspaces/WorkspacesLoadTest.php</file>
+		<directory>tests/Backend/Snowflake</directory>
+		<file>tests/Backend/Export/ExportParamsTest.php</file>
+	</testsuite>
+
+	<testsuite name="backend-mixed">
+		<directory>tests/Backend/Mixed</directory>
+	</testsuite>
+</phpunit>
