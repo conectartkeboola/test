@@ -1,6 +1,12 @@
 <?php
 
 require_once "vendor/autoload.php";
+
+$mdText = require_once "data/README.md";
+
+echo $mdText;
+
+/*
 use Keboola\Csv\CsvFile;
 use Keboola\StorageApi\Client;
 
