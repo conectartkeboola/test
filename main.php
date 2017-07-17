@@ -2,7 +2,7 @@
 
 require_once "vendor/autoload.php";
 
-$mdText = require_once __DIR__."README.md";
+$mdText = require_once __DIR__.DIRECTORY_SEPARATOR."README.md";
 
 echo $mdText;
 
@@ -32,3 +32,5 @@ $csv->writeRow(["Id", "Name"]);
 $csv->writeRow(["1", "test"]);
     
 $client->createTableAsync("out.c-daktela-reports", "test", $csv);
+
+ */
