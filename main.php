@@ -1,10 +1,13 @@
 <?php
 
-require_once "vendor/autoload.php";
+//require_once "vendor/autoload.php";
 
-$mdText = require_once "data/README.md";
+$path = getcwd();
+echo "Toto je absolutní cesta: ".$path;
 
-echo $mdText;
+echo pathinfo($_SERVER['PHP_SELF'])['dirname'];		// název aktuálního adresáře
+echo pathinfo($_SERVER['PHP_SELF'])['filename'];        // jméno aktuálního souboru 
+
 
 /*
 use Keboola\Csv\CsvFile;
@@ -32,3 +35,5 @@ $csv->writeRow(["Id", "Name"]);
 $csv->writeRow(["1", "test"]);
     
 $client->createTableAsync("out.c-daktela-reports", "test", $csv);
+
+*/ 
