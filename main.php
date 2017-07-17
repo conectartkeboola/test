@@ -2,7 +2,7 @@
 
 require_once "vendor/autoload.php";
 
-$mdText = require_once "/data/README.md";
+$mdText = require_once __DIR__."README.md";
 
 echo $mdText;
 
